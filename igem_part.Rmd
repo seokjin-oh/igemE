@@ -1,10 +1,10 @@
 ---
 title: "igem_part.Rmd"  
 output: html_document
- [iGEM part](igem_part.html)
+
 ---
 
-```{r}
+```{r echo=FALSE}
 no <- c(1, 2)
 team_name <- c("Tainan", "Valencia_UPV", "Vilnius-Lithuania", "William_and_Mary","Marburg", "Vilnius-Lithuania")
 project_title <- c("Oh_My_Gut", "printeria", "SYN_ORI", "SPEED", "VIBRIGENS", "flavoflow")
@@ -20,7 +20,7 @@ igem_team <- data.frame(no,
 knitr::kable(igem_team)
 ```
 
-```{r}
+```{r echo=FALSE}
 no <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28)
 
 part_id <- c("BBa_K2259000", "BBa_K2259001", "BBa_K2259002", "BBa_K2259003", "BBa_K2259004", "BBa_K2259005", "BBa_K2259006", "BBa_K2259007", "BBa_K2259008", "BBa_K2259009", "BBa_K2259010", "BBa_K2259011", "BBa_K2259014", "BBa_K2259015", "BBa_K2259016", "BBa_K2259017", "BBa_K2259018", "BBa_K2259019", "BBa_K2259022", "BBa_K2259024", "BBa_K2259025", "BBa_K2259026", "BBa_K2259029", "BBa_K2259031", "BBa_K2259086", "BBa_K2259088", "BBa_K2259092", "BBa_K2259093")
