@@ -1,0 +1,94 @@
+---
+title: "Promoter_3rd.Rmd"
+output: html_document
+---
+
+```{r}
+no <- c(1)
+team_name <- c("BOKU-Vienna")
+project_title <- c("help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.")
+                
+project_year <- c(2020) 
+                  
+wiki_page <- c("https://2020.igem.org/Team:BOKU-Vienna")
+ 
+
+igem_team <- data.frame(no, 
+                        team_name, 
+                        project_title, 
+                        project_year, 
+                        wiki_page)
+#knitr::kable(std, format = "markdown")
+knitr::kable(igem_team)
+```
+
+```{r}
+igem_part <- data.frame(id = 1:4,
+             BBid = c("BBa_J23101",
+                      "BBa_J231059",
+                      "BBa_B1001", "BBa_J06504"),
+             type = c("Promoter", "Promoter",
+                      "Terminator",
+                      "Reporter mCherry"),
+             link = c("http://parts.igem.org/Part:BBa_J23101",
+                      "http://parts.igem.org/Part:BBa_J23105",
+                      "http://parts.igem.org/Part:BBa_B1001", 
+                      "http://parts.igem.org/Part:BBa_J06504"),
+             backbone = rep("-", 4),
+             device_id = paste0("D", sprintf("%04d", rep(1, 4))),
+             team_name = rep("BOKU-Vienna", 4),
+             user = rep("yoo-bh", 4))
+igem_part
+```
+
+```{r echo=FALSE}
+id <- 1:4
+Promoter <- c("BBa_J23101", "BBa_J23101", "BBa_J23105", "BBa_J23105")
+value <- c("950", "1350", "10", "20")
+valunit <- rep("Fluorescence", length(id))
+incubhr <- rep("8", length(id))
+incubtemp <- rep("37℃", length(id))
+device_id <- paste0("D", sprintf("%04d", 1))
+link <- c("https://2020.igem.org/Team:BOKU-Vienna/Results", length(id))
+
+
+igem_obs <- data.frame(id, Promoter, value,
+                        valunit, incubhr, incubtemp,
+                       device_id, link)
+knitr::kable(igem_obs)
+```
+
+```{r}
+library(dplyr)
+
+id <- c(1)
+team_name <- c("Tongji_China")
+project <- c("Seek Heme And Reflect cracK (SHARK)")
+year <- c(2020)
+wiki <- c("https://2020.igem.org/Team:Tongji_China")
+
+igem_team1 <- data.frame(id, 
+                        team_name, 
+                        project, 
+                        year, 
+                        wiki)
+
+id <- c(2)
+team_name <- c("BOKU-Vienna")
+project <- c("help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.")
+year <- c(2020) 
+                  
+wiki <- c("https://2020.igem.org/Team:BOKU-Vienna")
+ 
+
+igem_team2 <- data.frame(id, 
+                        team_name, 
+                        project, 
+                        year, 
+                        wiki)
+
+bind_rows(igem_team1, igem_team2)
+
+```
+
+
