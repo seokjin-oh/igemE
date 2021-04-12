@@ -89,6 +89,7 @@ igem_team2 <- data.frame(id,
 
 bind_rows(igem_team1, igem_team2)
 
+knitr::kable(bind_rows(igem_team1, igem_team2))
 ```
 
 
