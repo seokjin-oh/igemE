@@ -37,13 +37,13 @@ knitr::kable(igem_part)
 
 
 ```{r echo=FALSE}
-id <- c(1:4)
+id <- 1:3
 Promoter <- c("R0051", "J04450", "WT")
 value <- c(195.6, 47, 1)
 valunit <- rep("Fluorescence", length(id))
 incubhr <- rep("Overnight", length(id))
 incubtemp <- rep("37℃", length(id))
-device_id <- rep("D0001", length(id))
+device_id <- rep("-", length(id))
 link <- c("https://2020.igem.org/Team:Tongji_China/Results",
            "https://2020.igem.org/Team:Tongji_China/Results", "https://2020.igem.org/Team:Tongji_China/Results")
 
@@ -65,13 +65,22 @@ igem_promoter <- igem_part %>%
 igem_promoter
 ```
 
-
+```{r echo=FALSE}
 colnames(igem_promoter)
 
 plot_data <- igem_promoter %>% 
   filter(BBid=="BBa_R0051") %>% 
   select(Promoter, value) %>% 
   mutate(Promoter=factor(Promoter))
+
+ggplot(plot_data, aes(x=Promoter, y=value)) +
+  geom_bar(stat="identity", position=position_dodge(width=0.5), width=0.4) +
+  scale_fill_manual(values=c("#ce1212", "#4a47a3")) +
+  theme_bw()
+```
+
+
+
 
 
 
