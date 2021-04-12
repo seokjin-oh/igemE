@@ -324,34 +324,30 @@ igem_team1 &lt;- data.frame(id,
                         year, 
                         wiki)
 
-id &lt;- c(1)
+id &lt;- c(2)
 team_name &lt;- c(&quot;BOKU-Vienna&quot;)
-project_title &lt;- c(&quot;help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.&quot;)
-                
-project_year &lt;- c(2020) 
+project &lt;- c(&quot;help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.&quot;)
+year &lt;- c(2020) 
                   
-wiki_page &lt;- c(&quot;https://2020.igem.org/Team:BOKU-Vienna&quot;)
+wiki &lt;- c(&quot;https://2020.igem.org/Team:BOKU-Vienna&quot;)
  
 
-igem_team2 &lt;- data.frame(no, 
+igem_team2 &lt;- data.frame(id, 
                         team_name, 
-                        project_title, 
-                        project_year, 
-                        wiki_page)
+                        project, 
+                        year, 
+                        wiki)
 
 bind_rows(igem_team1, igem_team2)</code></pre>
-<pre><code>##   id    team_name                             project year
-## 1  1 Tongji_China Seek Heme And Reflect cracK (SHARK) 2020
-## 2 NA  BOKU-Vienna                                &lt;NA&gt;   NA
-##                                      wiki no
-## 1 https://2020.igem.org/Team:Tongji_China NA
-## 2                                    &lt;NA&gt;  1
-##                                                                                            project_title
-## 1                                                                                                   &lt;NA&gt;
+<pre><code>##   id    team_name
+## 1  1 Tongji_China
+## 2  2  BOKU-Vienna
+##                                                                                                  project
+## 1                                                                    Seek Heme And Reflect cracK (SHARK)
 ## 2 help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.
-##   project_year                              wiki_page
-## 1           NA                                   &lt;NA&gt;
-## 2         2020 https://2020.igem.org/Team:BOKU-Vienna</code></pre>
+##   year                                    wiki
+## 1 2020 https://2020.igem.org/Team:Tongji_China
+## 2 2020  https://2020.igem.org/Team:BOKU-Vienna</code></pre>
 
 
 
