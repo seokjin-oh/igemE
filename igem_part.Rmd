@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r echo=FALSE}
-no <- c(1, 2)
+no <- c(1, 2, 3, 4, 5, 6)
 team_name <- c("Tainan", "Valencia_UPV", "Vilnius-Lithuania", "William_and_Mary","Marburg", "Vilnius-Lithuania")
 project_title <- c("Oh_My_Gut", "printeria", "SYN_ORI", "SPEED", "VIBRIGENS", "flavoflow")
 project_year <- c(2019, 2018, 2017, 2017, 2018, 2020)
