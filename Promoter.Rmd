@@ -6,7 +6,7 @@ output: html_document
 ```{r echo=FALSE}
 no <- c(1)
 team_name <- c("Tongji_China")
-project_title <- c("SHARK")
+project_title <- c("Seek Heme And Reflect cracK (SHARK)")
 project_year <- c(2020)
 wiki_page <- c("https://2020.igem.org/Team:Tongji_China")
 
