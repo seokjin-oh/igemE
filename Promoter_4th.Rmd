@@ -1,0 +1,20 @@
+---
+title: "Promoter_4th.Rmd"
+output: html_document
+---
+
+#install.packages("readxl")
+```{r}
+igem_team <- read.csv("igem_promoters.csv")
+igem_team
+
+library(readxl)
+
+igem_team <- read_excel("igem_promoters.xlsx", sheet=1, skip = 0, col_names=T)
+igem_promoter <- read_excel("igem_promoters.xlsx", sheet=2, skip = 0, col_names=T)
+igem_promoter
+
+```
+
+
+
