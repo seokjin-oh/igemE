@@ -13,6 +13,7 @@ library(readxl)
 igem_team <- read_excel("igem_promoters.xlsx", sheet=1, skip = 0, col_names=T)
 igem_promoter <- read_excel("igem_promoters.xlsx", sheet=2, skip = 0, col_names=T)
 igem_obs <- read_excel("igem_promoters.xlsx", sheet=3, skip = 0, col_names=T)
+igem_promoter
 igem_obs
 
 ```
