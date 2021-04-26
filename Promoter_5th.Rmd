@@ -1,0 +1,63 @@
+---
+title: "Promoter_5th"
+output: html_document
+---
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+
+```{r}
+destdir <- "download/promoter/"
+
+url <- "https://github.com/TH-Kim310/igemE/raw/main/%EC%97%91%EC%85%80.xlsx"
+download.file(url, paste0(destdir, "th-kim310.xlsx"))
+
+url <-  "https://github.com/jinjulee119/igemE2/raw/main/igem_promoters.xlsx"
+download.file(url, paste0(destdir, "jinjulee119.xlsx"))
+```
+
+```{r}
+exfilenames <- dir(destdir, pattern="*.xlsx")
+
+tmp <- list()
+for(i in 1:length(exfilenames)){
+  tmp[[i]] <- read_excel(paste0(destdir, exfilenames[i]), sheet=1, skip=0, col_names=T)
+}
+#igem_team <- bind_rows(tmp1, tmp2)
+igem_team <- do.call(bind_rows, tmp)
+igem_team
+```
+
+##team
+
+##part
+```{r}
+ids <- c("hayleykim97", 
+         "th-kim310",
+         "Lelp27",
+         "aputron",
+         "gpemelianov",
+         "yoo-bh",
+         "seokjin-oh",
+         "treebird19",
+         "jinjulee119"
+         )
+homedirs <- c(rep("igemE", 9), "igemE2") 
+
+
+i <- 1
+url <-  paste0("https://github.com/", ids[i], "/", homedirs[i], "/raw/main/igem_promoters.xlsx")
+destfile <- paste0(destdir, ids[i], ".xlsx")
+download.file(url, destfile)
+
+
+for(i in 1:length(ids)){
+  url <-  paste0("https://github.com/", ids[i], "/", homedirs[i], "/raw/main/igem_promoters.xlsx")
+  destfile <- paste0(destdir, ids[i], ".xlsx")
+  try(download.file(url, destfile))
+  cat(i, "\n");flush.console()
+}
+```
+
